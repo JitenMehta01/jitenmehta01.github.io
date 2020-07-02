@@ -1,0 +1,288 @@
+/**********************************************************************************************************************************************************************
+************************************************************************ BASE STYLES *********************************************************************************/
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+body{
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  max-width:1400px;
+  margin: 0 auto;
+  font-size:1em;
+
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	color:#404a51;
+	font-weight:100;
+	margin:0;
+
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+  font-weight:600;
+}
+
+hr{
+  border:none;
+}
+
+.main-header-search input{
+  border-radius:5px;
+border: 1px solid gray;
+padding:5px 40px 5px 35px;
+background: url('data:image/svg+xml,<svg width="30px" height="20px" fill="grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 170 900 24"><path d="M505.749 475.587l-145.6-145.6c28.203-34.837 45.184-79.104 45.184-127.317C405.333 90.926 314.41.003 202.666.003S0 90.925 0 202.669s90.923 202.667 202.667 202.667c48.213 0 92.48-16.981 127.317-45.184l145.6 145.6c4.16 4.16 9.621 6.251 15.083 6.251s10.923-2.091 15.083-6.251c8.341-8.341 8.341-21.824-.001-30.165zM202.667 362.669c-88.235 0-160-71.765-160-160s71.765-160 160-160 160 71.765 160 160-71.766 160-160 160z"></path></svg>') no-repeat;
+background-position-x: 10px;
+opacity:1;
+transition: .5s all ease-out;
+width:100%;
+}
+
+.main-header-search {
+  list-style: none;
+  width:100%;
+}
+
+.search{
+  display:flex;
+  justify-content: center;
+  padding:0;
+}
+
+
+/**********************************************************************************************************************************************************************
+************************************************************************ GRID CONTAINER *******************************************************************************/
+
+#grid-container{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10px auto;
+  height:100%;
+  padding:20px;
+  grid-template-areas:
+  "heading"
+  "cards"
+}
+
+header{
+  grid-area: heading;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+}
+
+.cards{
+  grid-area: cards;
+  display:flex;
+  flex-direction:column;
+
+}
+
+.card{
+  border: 2px solid #dfdfdf;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding:20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card:hover{
+  -webkit-box-shadow: 4px 4px 22px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 22px 2px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 22px 2px rgba(0,0,0,0.75);
+}
+
+.card img{
+width: 150px;
+margin-bottom:20px;
+border-radius: 75px;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100px;
+  justify-content: space-around;
+}
+
+.text-container h2{
+  font-weight:700;
+  font-size:20px;
+}
+
+.title-h1{
+  font-size:18px;
+  text-align: center;
+}
+
+
+
+/**********************************************************************************************************************************************************************
+************************************************************************ OVERLAY *************************************************************************************/
+
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal{
+  width:400px;
+  margin:50% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+  border: #45995a 6px solid;
+}
+
+.modal-close{
+  position: absolute;
+  right:15px;
+  top:5px;
+  cursor:pointer;
+  border:none;
+  margin-top:10px;
+  transition: .3s all ease-in;
+  padding:4px 10px;
+}
+
+.modal-close:hover{
+  background-color: #45995a;
+  color:#fff;
+}
+
+.hidden{
+  display:none;
+}
+
+.avatar{
+  border-radius: 60px;
+  width:120px;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height:300px;
+}
+
+.modal-content > .text-container{
+  align-items: center;
+}
+
+.carousel-button{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  border:0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-button-left{
+  left: 20px;
+}
+
+.carousel-button-right{
+  right:20px;
+  transform: rotate(180deg);
+}
+
+.arrow-image{
+  width:20px;
+}
+
+.carousel-dots{
+  display:flex;
+  justify-content: space-between;
+  width:80px;
+}
+
+.carousel_dot{
+  border-radius:50%;
+  border:none;
+  background-color: rgba(0, 0, 0, .3);
+  width:15px;
+  height:15px;
+}
+
+
+.dot-active{
+  background-color: black;
+}
+
+/**********************************************************************************************************************************************************************
+************************************************************************ MQ *************************************************************************************/
+/*** Tablet ***/
+@media only screen and (min-width:798px){
+  #grid-container{
+    grid-template-areas:
+    "heading heading"
+    "cards cards";
+    padding:0;
+  }
+
+  .cards{
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+
+  .card{
+    flex-basis: 350px;
+    flex-direction: row;
+    flex:400px 0.4;
+
+  }
+
+  .card img{
+  width: 125px;
+  margin: 0 15px 0 0;
+  }
+
+  .text-container{
+    align-items: flex-start;
+  }
+
+  .modal{
+      margin:25% auto auto;
+      width:50%;
+  }
+
+}
+
+
+/*** Desktop ***/
+
+@media only screen and (min-width:980px){
+  .card{
+    flex:initial;
+    width:400px;
+  }
+  .modal{
+      margin:15% auto auto;
+  }
+
+
+
+}

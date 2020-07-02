@@ -1,0 +1,60 @@
+/*************** CSS STYLES OVERIDING BOOTSTRAP *********/
+
+/** removing negative margin the first row of nav ONLY **/
+
+body{
+   font-family: 'Roboto', sans-serif;
+   font-size:10px;
+ }
+
+h1, h2, h3, h4, h5 h6, p{
+  margin:0;
+}
+
+/**** style only for first h1 ****/
+
+.navbar .row  .col-10 h1{
+  font-size:25px;
+
+}
+
+/** removes negative margin for the first row only **/
+nav > .row {
+  margin: 0;
+  width:100%;
+}
+
+/** removes border for the toggle menu button on Mobile **/
+.navbar-toggler{
+  border:none;
+}
+
+
+/*** left hand side menu ***/
+
+.mobileMenu{
+  position: fixed;
+  top:0;
+  bottom:0;
+  margin:auto;
+  left: 0;
+  margin-top:38px; /*** Needed to add custom margin-top to side menu since bootstrap does not provide a class above 3rem **/
+  transform:translateX(-100%);
+  transition: all ease-in .25s;
+  width:200px;
+}
+
+/*** when the mobie menu opens ****/
+.menu-open{
+  transform:translateX(0);
+}
+
+
+/*** MQ ***/
+
+@media(min-width:992px){
+  .mobileMenu{
+    transform:translateX(0);
+    margin-top:0;
+  }
+}
