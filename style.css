@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5 h6, p{
 nav > .row {
   margin: 0;
   width:100%;
+  background-color: #17181B;
 }
 
 /** removes border for the toggle menu button on Mobile **/
@@ -29,6 +30,17 @@ nav > .row {
   border:none;
 }
 
+a{
+  font-size:12px;
+  font-weight:400;
+  letter-spacing: 1px;
+}
+
+
+/** main container **/
+.main{
+  height:100vh;
+}
 
 /*** left hand side menu ***/
 
@@ -42,11 +54,61 @@ nav > .row {
   transform:translateX(-100%);
   transition: all ease-in .25s;
   width:200px;
+  background-color: #17181B;
 }
 
 /*** when the mobie menu opens ****/
 .menu-open{
   transform:translateX(0);
+}
+
+/*** sidebar menu profile container ***/
+
+.profile-container{
+background-image: url("img/profile-pic.JPG");
+background-size:cover;
+background-repeat: no-repeat;
+width:100%;
+height:200px;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+}
+.profile-container h3{
+  display:none;
+}
+
+/** ul menu **/
+
+.mobileMenu div:nth-of-type(2){
+  width:100%;
+  border-radius:0;
+}
+
+
+.mobileMenu div:nth-of-type(2) div a{
+border-radius: 0;
+padding-left:70px;
+}
+.mobileMenu div:nth-of-type(2){
+  width:100%;
+  border-radius:0;
+}
+
+.mobileMenu div:nth-of-type(2) > div > div a{
+  background-color: initial;
+  text-transform: uppercase;
+  color: #6c757d;
+  text-align: left;
+}
+
+.navbar .mobileMenu div:nth-of-type(2) > div > div .active{
+  color:#fff;
+  border: 1px solid rgba(0,0,0,.125)
+}
+
+.tab-pane{
+  background-color: #181818;
 }
 
 
@@ -56,5 +118,9 @@ nav > .row {
   .mobileMenu{
     transform:translateX(0);
     margin-top:0;
+  }
+  .main-content{
+    padding-left:200px; /*** adds 200px padding to the left of the container to acoomdate the sidebar menu. **/
+    padding-right:0;
   }
 }
