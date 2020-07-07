@@ -7,8 +7,39 @@ body{
    font-size:10px;
  }
 
-h1, h2, h3, h4, h5 h6, p{
+h1, h2, h3, h4, h5,h6{
   margin:0;
+  font-weight:700;
+}
+
+p{
+  font-size:14px;
+  font-weight:400;
+  color:#fff;
+}
+
+.row{
+  margin:0;
+}
+
+ul{
+  list-style: none;
+  padding-left:0;
+
+}
+
+svg{
+  width:15px;
+  height:15px;
+}
+
+a{
+  font-weight:400;
+  color:
+}
+
+.divider{
+  border-top: 1px solid #bbb;
 }
 
 /**** style only for first h1 ****/
@@ -17,6 +48,17 @@ h1, h2, h3, h4, h5 h6, p{
   font-size:25px;
 
 }
+
+/*** heading-colors***/
+.secondary-heading{
+  color:#F68338;
+}
+
+.heading{
+  color:white;
+}
+
+
 
 /** removes negative margin for the first row only **/
 nav > .row {
@@ -30,16 +72,11 @@ nav > .row {
   border:none;
 }
 
-a{
-  font-size:12px;
-  font-weight:400;
-  letter-spacing: 1px;
-}
 
 
 /** main container **/
 .main{
-  height:100vh;
+  background-color: #191919;
 }
 
 /*** left hand side menu ***/
@@ -54,7 +91,7 @@ a{
   transform:translateX(-100%);
   transition: all ease-in .25s;
   width:200px;
-  background-color: #17181B;
+  background-color: #222;
 }
 
 /*** when the mobie menu opens ****/
@@ -100,19 +137,129 @@ padding-left:70px;
   text-transform: uppercase;
   color: #6c757d;
   text-align: left;
+  letter-spacing: 1px;
+  font-size:12px;
 }
 
 .navbar .mobileMenu div:nth-of-type(2) > div > div .active{
   color:#fff;
-  border: 1px solid rgba(0,0,0,.125)
+  border: 1px solid rgba(0,0,0,.125);
+
 }
 
-.tab-pane{
+/* .tab-pane{
   background-color: #181818;
+} */
+
+
+/*************** About me *********/
+
+.what-ido{
+  flex-direction: column;
+}
+
+.icon-flex {
+  display: flex;
+  align-items: center;
+}
+/* .about-me-info-box div{
+  background-color: #222;
+
+} */
+
+.list-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height:150px;
+  margin:0;
+  justify-content: space-around;
+}
+
+.list-container li p a
+ {
+  color:#b7b7b7
+}
+
+svg + p {
+    margin-bottom:0
+}
+
+svg{
+  margin-right:10px;
+}
+
+.about-me-info-box div:nth-child(1) ul{
+padding: 0 10px 20px 0;
+}
+
+.about-me-info-box div:nth-child(2) ul{
+padding: 0 0 20px 10px;
+}
+
+.list-container{
+  background-color: #222;
+}
+
+/** CONTACT ME BUTTON ***/
+
+.btn{
+  background-color: #F68338;
+  border-radius: 0;
+  font-weight:600;
+  font-size:14px;
+  color:#fff;
+  letter-spacing: 1px;
+}
+
+.what-ido-icon{
+  width:35px;
+  height:35px;
 }
 
 
+/*** removing padding from columns ***/
+
+.icon-border{
+  padding:25px 15px 25px 15px;
+  border: 2px solid #343a40;
+}
+
+.what-ido-box-container{
+  display: flex;
+}
+
+.what-ido-box-container > div{
+  padding:0 15px 25px 0;
+}
+
+.what-ido div:nth-child(3){
+  padding-right:0;
+}
 /*** MQ ***/
+
+@media(max-width:768px){
+  .about-me-info-box{
+  flex-direction:column;
+  }
+  .about-me-info-box .col-6{
+    max-width:100%;
+    padding:0;
+  }
+  .about-me-info-box .col-6 ul{
+    padding:0!important;
+
+  }
+.what-ido-box-container{
+  flex-direction: column;
+}
+
+.what-ido-box-container div {
+  max-width:100%;
+  padding: 25px 0;
+}
+
+}
 
 @media(min-width:992px){
   .mobileMenu{
