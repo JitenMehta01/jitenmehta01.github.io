@@ -45,11 +45,16 @@
 </svg>
 
 
-    <!-- responsive nav, manipulated with CSS -->
+<!---
+_____________________________________________________________________________CONTAINER_____________________________________________________________________________
 
+ ------------------------------------------------------------->
     <div class="container-fluid main">
       <div class="row">
+
+            <!-- SIDEBAR NAV CONTAINER -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-light p-0 justify-content-sm-start fixed-top">
+            <!-- IMAGE AND HEADING IN SIDEBAR -->
                 <div class = ' row d-lg-none'>
                   <div class = ' col-10 d-flex m-auto justify-content-center'>
                   <h1 class = 'text-center text-white'>Jiten Mehta</h1>
@@ -61,6 +66,7 @@
                   </div>
                 </div>
 
+            <!-- SIDEBAR MENU -->
             <div class="d-flex flex-column collapse navbar-collapse mobileMenu " id="navbarTogglerDemo02">
 
               <!-- profile-pic + image -->
@@ -82,18 +88,35 @@
             </div>
           </nav>
 
+          <!-- // SIDEBAR NAV CONTAINER -->
+
+          <!---
+_____________________________________________________________________________MAIN CONTENT CONTAINER_____________________________________________________________________________
+
+           ------------------------------------------------------------->
+
+
           <div class = 'container main-content '>
             <div class = 'row'>
              <div class = 'col-12 p-0'>
               <div class="tab-content" id="nav-tabContent">
-                <!--- ABOUT ME -->
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...
-                  <!-- heading -->
+
+
+                <!---
+_____________________________________________________________________________ABOUT ME_____________________________________________________________________________
+
+                 ------------------------------------------------------------->
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+          <!--  ABOUT ME HEADING -->
                   <div class = 'mt-5 mb-4'>
                   <h6 class = 'secondary-heading'>Front-End Web Developer</h6>
                   <h3 class = 'heading mt-2'>Jiten Mehta </h3>
                  </div>
-                 <!-- about me para -->
+          <!-- // ABOUT ME HEADIN -->
+
+
+          <!-- ABOUT ME PARA -->
                  <div class = 'mb-5'>
                 <p>Hi, My name is Rory McCann. I am a Web Designer, and etiam accumsan scelerisque rhoncus.
                   Nulla quis laorey velit. Pelteqle quisu velleopha retra congue.
@@ -103,8 +126,13 @@
                      Pelteqle quisu velleopha retra congue. Nulla quis laoreet velit.
                      Pelteqle quisu velleopha retra conue. Lorem ipsum dolor sit amet consect liscing elit. Donec hendrerit dui sapien coner the velit pelteqle.</p>
                 </div>
-                <!-- info boxes -->
+          <!-- // ABOUT ME PARA -->
+
+          <!-- ABOUT ME INFO BOXES -->
                 <div class = 'row about-me-info-box mb-4'>
+
+          <!-- ABOUT ME INFO BOXES 1ST COL -->
+
                   <div class = 'col-6 pl-0'>
                     <ul>
                       <div class = 'list-container pl-3'>
@@ -123,6 +151,8 @@
                       </div>
                     </ul>
                   </div>
+
+          <!-- ABOUT ME INFO BOXES 2ND COL-->
                   <div class = 'col-6 pr-0 '>
                     <ul>
                       <div class = 'list-container pl-3'>
@@ -141,22 +171,32 @@
                       </div>
                     </ul>
                   </div>
+            <!-- // ABOUT ME INFO BOXES -->
                 </div>
 
-                  <!-- BUTTON -->
-                  <button type="button" class="btn p-3 mb-5">GET IN TOUCH</button>
 
-                  <!-- Divider -->
+
+            <!-- GET IN TOUCH BUTTON -->
+                  <button type="button" class="btn p-3 mb-5">GET IN TOUCH</button>
+            <!-- // GET IN TOUCH BUTTON -->
+
+            <!-- DIVIDER -->
 
                   <div class = 'divider'>
                   </div>
 
-                  <!-- what i do -->
+            <!-- // DIVIDER -->
+
+
+
+            <!-- WHAT I DO -->
                   <div class = 'row what-ido'>
+            <!-- WHAT I DO HEADING -->
                     <div class = 'mt-5 mb-4'>
                     <h6 class = 'secondary-heading'>What i do</h6>
                     <h3 class = 'heading mt-2'>My Services</h3>
                    </div>
+
                    <div class = 'what-ido-box-container'>
                       <div class = col-4>
                         <div class = 'icon-flex icon-border'>
@@ -188,13 +228,141 @@
                  </div>
                  </div>
 
+            <!-- // WHAT I DO -->
             </div>
 
+            <!---
+_____________________________________________________________________________PORTFOLIO_____________________________________________________________________________
 
-                <!--- PORTFOLIO -->
+             ------------------------------------------------------------->
+
+
+
+
                 <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
+                  <!--  PORTFOLIO HEADING -->
+                  <div class = 'mt-5 mb-4'>
+                  <h6 class = 'secondary-heading'>My portfolio</h6>
+                  <h3 class = 'heading mt-2'>Personal Projects</h3>
+                  </div>
+                  <!-- //  PORTFOLIO HEADING -->
 
+
+                  <!-- PORTFOLIO PARA -->
+                  <div class = 'mb-5'>
+                  <p>Hi, My name is Rory McCann. I am a Web Designer, and etiam accumsan scelerisque rhoncus.
+                  Nulla quis laorey velit. Pelteqle quisu velleopha retra congue.
+                  Nulla quis laoreet velit. Pelteqle quisu velleopha retra congue.
+                  Lorem ipsum dolor sit the cons eturadip liscing elit. Donec hendrerit dui sapien coner the consequat erose viverra at.</p>
+                  </div>
+                  <!-- // PORTFOLIO PARA -->
+
+
+                  <!-- PERSONAL PROJECTS ROW 1 -->
+                  <div class = 'flex-column row portfolio mb-4 justify-content-center flex-sm-wrap flex-sm-row '>
+
+                  <!-- COL1 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\profile-pic.JPG'>
+                  </div>
+
+                  <!-- COL2 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\portfolio-images\API-employee-directory-portfolio.png'>
+                  </div>
+
+                  <!-- COL3 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\portfolio-images\web-dashboard-app-portfolio.png'>
+                  </div>
+
+                  <!-- COL1 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\profile-pic.JPG'>
+                  </div>
+
+                  <!-- COL2 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\portfolio-images\API-employee-directory-portfolio.png'>
+                  </div>
+
+                  <!-- COL3 -->
+                  <div class = 'mb-4 d-flex col-4 pl-0'>
+                    <img src = 'img\portfolio-images\web-dashboard-app-portfolio.png'>
+                  </div>
+                  <!-- // ABOUT ME INFO BOXES -->
+                  </div>
+
+                  <!-- PERSONAL PROJECTS ROW 2 -->
+                  <div class = 'row about-me-info-box mb-4'>
+
+                  <!-- COL1 -->
+                  <div class = 'col-4 pl-0'>
+                  </div>
+                  <!-- COL2 -->
+                  <div class = 'col-4 pl-0'>
+                  </div>
+
+                  <!-- COL3 -->
+                  <div class = 'col-4 pl-0'>
+                  </div>
+                  <!-- // ABOUT ME INFO BOXES -->
+                  </div>
+
+
+
+                  <!-- GET IN TOUCH BUTTON -->
+                  <button type="button" class="btn p-3 mb-5">GET IN TOUCH</button>
+                  <!-- // GET IN TOUCH BUTTON -->
+
+                  <!-- DIVIDER -->
+
+                  <div class = 'divider'>
+                  </div>
+
+                  <!-- // DIVIDER -->
+
+
+
+                  <!-- WHAT I DO -->
+                  <div class = 'row what-ido'>
+                  <!-- WHAT I DO HEADING -->
+                    <div class = 'mt-5 mb-4'>
+                    <h6 class = 'secondary-heading'>What i do</h6>
+                    <h3 class = 'heading mt-2'>My Services</h3>
+                   </div>
+
+                   <div class = 'what-ido-box-container'>
+                      <div class = col-4>
+                        <div class = 'icon-flex icon-border'>
+                          <svg class = 'what-ido-icon'> <use xlink:href =#web-design class='icon'> </svg>
+                          <p><b>Front-End web Development</b></P>
+                        </div>
+                      </div>
+                      <div class = 'col-4'>
+                        <div class = 'icon-flex icon-border'>
+                          <svg class = 'what-ido-icon'> <use xlink:href =#digital-design class='icon what-ido-icon'> </svg>
+                          <p><b>Digital Design</b></p>
+                        </div>
+                      </div>
+                      <div class = 'col-4'>
+                        <div class = 'icon-flex icon-border'>
+                          <svg class = 'what-ido-icon'> <use xlink:href =#graphic-design class='icon'> </svg>
+                          <p><b>Graphic Design</b></p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class = 'mb-5'>
+                  <p>Hi, My name is Rory McCann. I am a Web Designer, and etiam accumsan scelerisque rhoncus.
+                   Nulla quis laorey velit. Pelteqle quisu velleopha retra congue.
+                   Nulla quis laoreet velit. Pelteqle quisu velleopha retra congue.
+                   Lorem ipsum dolor sit the cons eturadip liscing elit. Donec hendrerit dui sapien coner the consequat erose viverra at.</p>
+                  <p>Quality quis laorey velit.
+                      Pelteqle quisu velleopha retra congue. Nulla quis laoreet velit.
+                      Pelteqle quisu velleopha retra conue. Lorem ipsum dolor sit amet consect liscing elit. Donec hendrerit dui sapien coner the velit pelteqle.</p>
+                  </div>
+                  </div>
 
 
                 </div>
