@@ -382,9 +382,62 @@ figcaption .secondary-heading{
 
 }
 
+/*** Skillset ***/
+
+.skillbar > .row{
+  justify-content: space-between;
+  height:100px;
+}
+
+.skill-icon svg use {
+  fill: #F68338;
+}
+
+.skill-icon::before {
+  content: '';
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right:0;
+  margin: auto;
+  height:50px;
+  width:50px;
+  border: 3px solid #F68338;
+  z-index:1;
+  border-radius: 500px;
+}
+
+.skill-icon{
+  width:100px;
+  height:100px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 500px;
+  margin: 20px 0;
+}
 
 
+.skill-icon-svg{
+  width:20px;
+  height:20px;
+  z-index:2;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size:40px;
+}
 
+.skillbar{
+  height:200px;
+}
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** MODAL POP-UP BOX*********************************************************************************************************************************************************************************************************************************************/
 
@@ -427,14 +480,32 @@ figcaption .secondary-heading{
   .col-4{
     padding-right:15px; /** inital value is 0. **/
   }
+
+  /*** Skill icons **/
+.skill-icon::before{
+  width:90%;
+  height:90%;
+}
+.skillbar > .row{
+  height:initial;
+}
+
+.skill-icon-svg{
+  width:35px;
+  height:35px;
+  margin: 34px auto;
 }
 
 
-@media(min-width:576px){
-  .portfolio .col-4 .portfolio-image-container{
-    width:215px;
-  }
+  /***  // Skill icons **/
+
+.portfolio .col-4 .portfolio-image-container{
+  width:215px;
+
 }
+}
+
+
 
 @media(min-width:960px){
   .portfolio .col-4 .portfolio-image-container{
