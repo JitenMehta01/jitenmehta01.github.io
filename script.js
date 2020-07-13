@@ -9,8 +9,11 @@ toggleButton.addEventListener('click', e =>{
 
  // closes menu when clicked outside
 
-window.addEventListener('click', e =>{
-  if(mobileMenu.classList[5] === 'menu-open' && e.target.className === 'main-content'){
-  mobileMenu.classList.remove('menu-open')
+ window.addEventListener('click', e =>{
+  const toggleSpan = document.querySelector('.navbar-toggler-icon');
+  if (e.target === toggleSpan) {
+    return;
+  } else {
+    mobileMenu.classList.remove('menu-open');
   }
-})
+});

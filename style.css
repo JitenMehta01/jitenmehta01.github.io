@@ -42,6 +42,11 @@ img{
   width:100%;
 }
 
+.plain-link{
+  color:#fff;
+  font-weight:600;
+}
+
 .btn:focus{
   box-shadow: none;
 }
@@ -329,6 +334,32 @@ figcaption .secondary-heading{
 }
 
 
+/** for portfolio site only **/
+
+.color-scheme-background{
+  width:75px;
+  height:75px;
+}
+
+
+.color-scheme .col-3:nth-of-type(1) .color-scheme-background{
+  background-color: #F68338;
+}
+
+.color-scheme .col-3:nth-of-type(2) .color-scheme-background{
+  background-color: #fff;
+}
+
+.color-scheme .col-3:nth-of-type(3) .color-scheme-background{
+  background-color: #222;
+  border:2px solid white;
+}
+
+.color-scheme .col-3:nth-of-type(4) .color-scheme-background{
+  background-color: #191919;
+}
+
+
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** CV *********************************************************************************************************************************************************************************************************************************************/
 
@@ -345,7 +376,7 @@ figcaption .secondary-heading{
   content: '';
   position: absolute;
   top:110px;
-  bottom:0;
+  bottom:110PX;
   left:-.7rem;
   margin:auto;
   height:100%;
@@ -376,7 +407,7 @@ figcaption .secondary-heading{
   border-radius: 500px;
   border: 1px solid #F68338;
   margin-top: 5px;
-  left: -15px;
+  left: -14px;
   z-index:999;
   margin-top:13px;
 
@@ -435,8 +466,8 @@ figcaption .secondary-heading{
   font-size:40px;
 }
 
-.skillbar{
-  height:200px;
+.skill-text{
+  display: none;
 }
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** MODAL POP-UP BOX*********************************************************************************************************************************************************************************************************************************************/
@@ -455,10 +486,11 @@ figcaption .secondary-heading{
   border:none;
 }
 
-.modal-content .modal-footer .btn:hover,
+
 .modal-content .modal-footer .btn:active,
 .modal-content .modal-footer .btn:focus,
-.modal-content .modal-footer .btn:active:focus
+.modal-content .modal-footer .btn:active:focus,
+.modal-content .modal-footer .btn:visited
 {
   background-color: #F68338;
   color:#222;
@@ -466,12 +498,25 @@ figcaption .secondary-heading{
   border:1px solid #F68338;
 }
 
-
+.modal-content .modal-footer .btn{
+    background-color: #F68338;
+    border:1px solid #F68338;
+    transition: none;
+}
 
 
 
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** MQ *********************************************************************************************************************************************************************************************************************************************/
+
+
+@media(min-width:768px){
+  .skill-text{
+    display: block;
+    margin-bottom:-45px;
+    font-size: 12px;
+}
+}
 
 @media(min-width:576px){
   .portfolio .col-4 .portfolio-image-container{
@@ -503,6 +548,7 @@ figcaption .secondary-heading{
   width:215px;
 
 }
+
 }
 
 
