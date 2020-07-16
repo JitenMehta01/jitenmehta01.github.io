@@ -214,9 +214,10 @@ _____________________________________________________________________________CON
                 <div class="col-12 p-0">
                   <div class="list-group" id="list-tab" role="tablist">
                     <a class=" list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">About me</a>
-                    <a class=" list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Portfolio</a>
-                    <a class=" list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">C.V</a>
-                    <a class=" list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Get in touch</a>
+                    <a class=" list-group-item list-group-item-action" id="list-portfolio-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Portfolio</a>
+                    <a class=" list-group-item list-group-item-action" id="list-cv-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">C.V</a>
+                    <a class=" list-group-item list-group-item-action" id="list-getintouch-list" data-toggle="modal" data-target="#getintouch">Get in touch</a>
+
                   </div>
                 </div>
               </div>
@@ -257,7 +258,7 @@ ________________________________________________________________________________
                            Versatile you may ask, how so?
                            Well my initial experience in graphic design, in combination with my experience as a front-end web developer (check out the awesome portfolio!)
                            I have been able to acquire a balanced set of design and development tools to create the perfect website or web application.</p>
-                        <p>Check out some the web technologies I utilize below!</p>
+                        <p>Check out some of the web technologies I utilize below!</p>
                       </div>
                       <!-- // ABOUT ME PARA -->
 
@@ -327,7 +328,7 @@ ________________________________________________________________________________
                               </li>
                               <li class = 'icon-flex'>
                                 <svg> <use xlink:href =#arrow class='icon'> </svg>
-                                <p> <b>PHONE : </b> (+44) 7500894422</p>
+                                <p> <b>PHONE : </b> <a class = 'text-white' href='tel:07500894422' >(+44) 7500894422</a></p>
                               </li>
                             </div>
                           </ul>
@@ -359,7 +360,7 @@ ________________________________________________________________________________
                     <!-- // CONTACT DETAILS CONTAINER-->
 
                     <!-- GET IN TOUCH BUTTON -->
-                    <button type="button" class="btn p-3 mb-5">GET IN TOUCH</button>
+                    <button type="button" class="btn p-3 mb-5" data-toggle="modal" data-target="#getintouch">GET IN TOUCH</button>
                     <!-- // GET IN TOUCH BUTTON -->
 
 
@@ -405,14 +406,14 @@ ________________________________________________________________________________
 
                       <!-- SKILL CONTAINER -->
                       <div class = 'mt-4 mb-0 mb-md-5'>
-                         <p class = 'mb-sm-5'>As mentioned above, I have experience in graphic/digital design.
+                         <p class = 'mb-sm-5'>As mentioned above, I have experience in both graphic and digital design.
                            This ranges from designing leaflets and brochures to creating prototypes by using tools such as Adobe XD.
-                           Below are some of the many tools I have utilized in the last decade or so. To view my graphic design portfolio, please click <a class = 'plain-link' href='https://www.behance.net/jitenmehta521c' target = '_blank'>here</a>.</p>
+                           Below are some of the many skills I have utilized in the last decade or so in Graphic Design. To view my graphic design portfolio, please click <a class = 'plain-link' href='https://www.behance.net/jitenmehta521c' target = '_blank'>here</a>.</p>
 
                         <!-- SKILL ICON CONTAINER -->
                         <div class = 'skillbar mb-0 '>
                           <!-- 1ST SKILL ROW -->
-                          <div class = 'row d-flex mt-0 flex-nowrap mb-md-4'>
+                          <div class = 'row d-flex mt-0 flex-nowrap mb-md-5'>
 
                             <div class = 'mt-0 skill-icon mb-4 d-md-flex align-items-center justify-content-end flex-column'>
                               <svg class = 'skill-icon-svg'> <use xlink:href =#photoshop-icon class='icon'> </svg>
@@ -467,7 +468,7 @@ ________________________________________________________________________________
 
              ------------------------------------------------------------->
 
-                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-portfolio-list">
                     <!--  PORTFOLIO HEADING -->
                     <div class = 'mt-5 mb-4'>
                     <h6 class = 'secondary-heading'>My portfolio</h6>
@@ -480,7 +481,7 @@ ________________________________________________________________________________
                     <p>The following projects are personal projects from either courses,
                       the teamtreehouse techdegree or just experimenting with the latest web technologies used in front-end web.
                       With the exception of bootstrap and Jquery, these projects have been hardcoded by myself.
-                      These projects take advantage of CSS flexbox and grid, vanilla javaScript, AJAX and DOM manipuilation. </p>
+                      These projects take advantage of CSS flexbox and grid, vanilla javaScript, AJAX and DOM manipulation. </p>
                     </div>
                     <!-- // PORTFOLIO PARA -->
 
@@ -617,7 +618,7 @@ ________________________________________________________________________________
                           <figcaption class = ' desktopfigcation px-3 py-5'>
                             <h6 class = 'secondary-heading'>My portfolio</h6>
                             <h4 class = 'sub-heading mt-2'>Interactive Photo Gallery</h4>
-                            <p class = 'mt-2'>This project uses HTML, CSS and the popular programming language JavaScript to create an interactive, searchable gallery of photos.
+                            <p class = 'mt-2'>This project uses HTML, CSS and the popular programming language JavaScript to create an interactive searchable gallery of photos.
                             </p>
                             <!-- button that trigger modal popup-->
                             <div class = 'mt-5 icon-flex'>
@@ -648,7 +649,7 @@ ________________________________________________________________________________
                           <figcaption class = ' desktopfigcation px-3 py-5'>
                             <h6 class = 'secondary-heading'>My portfolio</h6>
                             <h4 class = 'sub-heading mt-2'>SCSS Styleguide</h4>
-                            <p class = 'mt-2'>This SCSS project creates a style guide that can act a personal and custom Bootstrap that you can drop into any of your projects.
+                            <p class = 'mt-2'>This SCSS project creates a style guide that I personally use to get a project up and running quickly.
                             </p>
                             <!-- button that trigger modal popup-->
                             <div class = 'mt-5 icon-flex'>
@@ -729,7 +730,7 @@ ________________________________________________________________________________
                           <figcaption class = ' desktopfigcation px-3 py-5'>
                             <h6 class = 'secondary-heading'>My portfolio</h6>
                             <h4 class = 'sub-heading mt-2'>JML</h4>
-                            <p class = 'mt-2'>This website was created for a plumbing contractor based in Hinckley. Simple but creative, it’s an informative website which tell's the user everything they need to know about ventilation.
+                            <p class = 'mt-2'>This website was created for a plumbing contractor based in Hinckley. Simple but creative, it’s an informative website which tell's the user everything they need to know about their services.
                             </p>
                             <!-- button that trigger modal popup-->
                             <div class = 'mt-5 icon-flex'>
@@ -870,14 +871,14 @@ ________________________________________________________________________________
 
                  ------------------------------------------------------------->
 
-                   <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                   <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-cv-list">
 
                       <!-- CV HEADING AND INTRO -->
                       <div class = 'mt-5 pb-4 cv-block'>
                       <h6 class = 'secondary-heading'>Curriculum Vitae</h6>
                       <h3 class = 'sub-heading mt-2 mb-4'>Jiten Mehta</h3>
-                      <p>This curriculum vitae will detail my experience in
-                         <b>Digital Design</b> / <b>Front-End Web</b> and my progression so far since graduating from an MA in Digital Design from DeMontfort University in September 2016.</p>
+                      <p>This curriculum vitae will detail my experience and education in
+                         <b>Digital Design</b> / <b>Front-End Web</b> and my progression so far since 2008.</p>
                       </div>
                       <!-- // CV HEADING AND INTRO -->
 
@@ -921,26 +922,26 @@ ________________________________________________________________________________
                           <span class = 'text-white'>Grade: Exceeds Expectations</span>
                         </div>
                         <p class = 'mt-1 mb-4'>This Techdegree is a subscription based course.
-                           The Techdegree is comprised of 9 courses. Each project requires you to take courses and code challenges before it starts.</p>
+                           The Techdegree is comprised of 9 projects. Each project requires you to take courses and code challenges before it starts.</p>
                         <div class = 'cv-heading my-1 d-flex flex-column'>
                           <h3 class = 'pr-1 sub-heading mt-0'>MA in Digital Design</h3>
                           <span class = 'text-white'>2014 -2016</span>
                           <span class = 'text-white'>Grade: Merit</span>
                         </div>
-                        <p class = 'mt-1 mb-4'>This course covers Web Design, UX Design and Graphic Design. For my final major project I created a android app for Caterpillars welcome center based in Desford, Leicester. </p>
+                        <p class = 'mt-1 mb-4'>This course covered Web Design, UX Design and Graphic Design. For my final major project, I created an android app for Caterpillars welcome center based in Desford, Leicester. </p>
                         <div class = 'cv-heading my-1 d-flex flex-column'>
                           <h3 class = 'pr-1 sub-heading mt-0'>BA in Media Production</h3>
                           <span class = 'text-white'>2010 -2013</span>
                           <span class = 'text-white'>Grade: 2:1</span>
                         </div>
-                        <p class = 'mt-1 mb-4'>This course covered many disaclplines such as design, photography, production planning and script writing.
-                           I chose to focus on Digital Media for my final year.</p>
+                        <p class = 'mt-1 mb-4'>This course covered many disciplines such as design, photography, production planning and script writing.
+                           I chose to focus on Digital Media in my final year.</p>
                         <div class = 'cv-heading my-1 d-flex flex-column'>
                           <h3 class = 'pr-1 sub-heading mt-0'>HD in Media Production</h3>
                           <span class = 'text-white'>2008 -2010</span>
                           <span class = 'text-white'>Grade: DDM</span>
                         </div>
-                        <p class = 'mt-1 mb-4'>This course covered many topics similar to my BA. It also included sound producton, video editing and journalism  </p>
+                        <p class = 'mt-1 mb-4'>This course covered many topics similar to my BA. It also included sound producton, video editing and journalism.</p>
                       </div>
                         <!-- // EDUCATION -->
 
@@ -1083,7 +1084,7 @@ _____________________________________________________________________________MOD
         </button>
       </div>
       <div class="modal-body">
-        <p>In this project, I used all my knowledge in HTML, CSSS and javaScript to showcase some projects I have completed in my career thus far and in my spare-time . The idea of this project is to show the world (and potentially employers) what I can do with front-end web technologies. </p>
+        <p>In this project, I used all my knowledge in HTML, CSS and javaScript to showcase some projects I have completed in my career thus far and in my spare-time . The idea of this project is to show the world (and potentially employers) what I can do with front-end web technologies. </p>
         <p>This project uses bootstrap as a framework, although custom CSS and javaScvript was used to create some cool effects. </p>
         <p>The colour scheme is as follows:</p>
         <div class = 'color-scheme row mb-3'>
@@ -1375,6 +1376,44 @@ _____________________________________________________________________________MOD
         <div class="modal-footer">
           <a class="p-3 btn btn-secondary" data-dismiss="modal">Close</a>
           <a target = '_blank' href='https://www.independent-freight.com/' type="button" class="p-3 btn btn-primary">Website Link</a>
+        </div>
+    </div>
+ </div>
+</div>
+
+<!-- get in touch  -->
+<div class=" modal fade" id="getintouch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" style="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Get In Touch!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Got a project idea? Or just want to have a chat? Don't hestitate to get in touch. Contact details below.</p>
+          <div class = 'col-12 pl-0'>
+            <ul class = 'mb-0'>
+              <div class = 'list-container pl-3'>
+                <li class = 'icon-flex'>
+                  <svg> <use xlink:href =#arrow class='icon'> </svg>
+                  <p> <b>Email : </b> <a href = 'mailto:jitenmehta03@gmail.com'>jitenmehta03@gmail.com</a></p>
+                </li>
+                <li class = 'icon-flex'>
+                  <svg> <use xlink:href =#arrow class='icon'> </svg>
+                  <p> <b>Phone : </b> <a href = 'tel:7500894422'>(+44) 7500894422</a></p>
+                </li>
+                <li class = 'icon-flex'>
+                  <svg> <use xlink:href =#arrow class='icon'> </svg>
+                  <p> <b>LinkedIn : </b> <a href = 'https://www.linkedin.com/in/jiten-mehta-8a659598/' target="_blank">www.linkedin.com/in/jiten-mehta-8a659598/</a></p>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="p-3 btn btn-secondary" data-dismiss="modal">Close</a>
         </div>
     </div>
  </div>
