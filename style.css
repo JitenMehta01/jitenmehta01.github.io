@@ -35,7 +35,12 @@ svg{
 
 a{
   font-weight:400;
-  color:
+  color:#fff;
+}
+
+a:hover{
+  color:#fff;
+  text-decoration: none;
 }
 
 img{
@@ -69,11 +74,12 @@ img{
 
 /*** heading-colors***/
 .secondary-heading{
-  color:#F68338;
+  color:#fff;
 }
 
 .sub-heading{
   color:white;
+  font-size:20px;
 }
 
 
@@ -82,7 +88,7 @@ img{
 nav > .row {
   margin: 0;
   width:100%;
-  background-color: #17181B;
+  background-color: #222;
 }
 
 /** removes border for the toggle menu button on Mobile **/
@@ -265,6 +271,19 @@ padding: 0 0 20px 10px;
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** PORTOFLIO *********************************************************************************************************************************************************************************************************************************************/
 
+/*** Mobile styles only. Desktop styles can be found in the MQ section **/
+
+.mobilefigcation{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  cursor: pointer;
+}
+
+
+
 .portfolio .col-4{
   max-width:100%;
 
@@ -272,66 +291,18 @@ padding: 0 0 20px 10px;
 
 .portfolio .col-4 .portfolio-image-container{
   width: 100%;
-
 }
 
-.portfolio-image-container{
-  perspective: 50em;
-  -moz-perspective:50em;
-  -webkit-perspective: 50em;
-}
-
-figcaption{
-  position: absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  background-color: #F68338;
-  width:inherit;
-  transform: rotateY(90deg);
-  opacity: 0;
-  transform-origin: 0 50%;
-  transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
-}
-
-.portfolio-image-container:hover figcaption{
-transform: rotateY(0);
-opacity: 1;
-}
-
-.portfolio-image-container img {
-  transform-origin: 100% 50%;
-  transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
-}
-
-.portfolio-image-container:hover img{
-  transform: rotateY(-90deg);
-  opacity: 0;
+.personal-project-container{
+    height:370px;
 }
 
 
-/******** overlay styles ***/
-
-figcaption .icon-flex .icon{
-  fill:#222;
+.desktopfigcation{
+display: none;
 }
 
-figcaption .icon-flex .btn{
-  border:none;
-}
 
-figcaption p{
-  color:#222;
-}
-
-figcaption .secondary-heading{
-  color:#222;
-}
 
 
 /** for portfolio site only **/
@@ -359,7 +330,18 @@ figcaption .secondary-heading{
   background-color: #191919;
 }
 
+.card-container-odd{
+  background-color: #F68338;
+}
 
+.card-container{
+  background-color: #fff;
+}
+
+.card-container h5,
+.card-container p{
+  color:#F68338;
+}
 /***********************************************************************************************************************************************************************************************************************************************************************************************************************************
 **************************************************************************** CV *********************************************************************************************************************************************************************************************************************************************/
 
@@ -411,6 +393,15 @@ figcaption .secondary-heading{
   z-index:999;
   margin-top:13px;
 
+}
+
+
+.card-container + .desktopfigcation .sub-heading{
+  color:#fff;
+}
+
+.sub-heading{
+  color:#F68338;
 }
 
 /*** Skillset ***/
@@ -549,6 +540,14 @@ figcaption .secondary-heading{
 
 }
 
+.mobilefigcation{
+  margin-right: 15px;
+}
+
+.personal-project-container{
+    height:215px;
+}
+
 }
 
 
@@ -556,6 +555,9 @@ figcaption .secondary-heading{
 @media(min-width:960px){
   .portfolio .col-4 .portfolio-image-container{
     width:290px;
+  }
+  .personal-project-container{
+      height:290px;
   }
 }
 
@@ -594,4 +596,134 @@ figcaption .secondary-heading{
     padding-left:200px; /*** adds 200px padding to the left of the container to acoomdate the sidebar menu. **/
     padding-right:0;
   }
+
+
+
+  /******** overlay styles ***/
+
+
+
+  .desktopfigcation p{
+    color:#222;
+    display: block;
+  }
+
+  .desktopfigcation .icon-flex .icon{
+    fill:#222;
+  }
+
+  .desktopfigcation .icon-flex .btn{
+    border:none;
+  }
+
+
+  .desktopfigcation .secondary-heading{
+    color:#222;
+  }
+
+  .portfolio-image-container{
+    perspective: 50em;
+    -moz-perspective:50em;
+    -webkit-perspective: 50em;
+  }
+
+  .card-container-odd + .desktopfigcation{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: #fff;
+    width:inherit;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transform-origin: 0 50%;
+    transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+  }
+
+  .card-container + .desktopfigcation{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: #F68338;
+    width:inherit;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transform-origin: 0 50%;
+    transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+  }
+
+  .portfolio-image-container:hover .desktopfigcation{
+  transform: rotateY(0);
+  opacity: 1;
+  }
+
+  .portfolio-image-container:hover + .desktopfigcation{
+  transform: rotateY(0);
+  opacity: 1;
+  }
+
+  .card-container,
+  .card-container-odd
+   {
+    transform-origin: 100% 50%;
+    transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+  }
+
+  .card-container{
+    width: 100%;
+    height: 290px;;
+  }
+
+  .card-container-odd{
+
+    width: 100%;
+    height: 290px;
+  }
+
+  .card-container-odd h2{
+    color:#fff;
+  }
+
+  .card-container h2{
+    color:#F68338;
+  }
+
+
+
+  .portfolio-image-container:hover .card-container,
+  .portfolio-image-container:hover .card-container-odd
+  {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+
+  .sub-heading{
+    font-size:20px;
+  }
+
+  .card-container-odd + .desktopfigcation .sub-heading{
+    color:#F68338;
+  }
+
+    .card-container-odd + .desktopfigcation .btn{
+    background-color: initial;
+    color: #F68338;
+  }
+
+  .card-container-odd + .desktopfigcation .btn:hover{
+  color: #212529;
+}
+
+
 }
